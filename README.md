@@ -1,2 +1,6 @@
 # Reviews_NLP
 A natural language processing model to evaluate whether a restaurant review is positive or negative.
+
+I've implemented a Bag of Words representation of the reviews (in Reviews_NLP.py, with dataset Restaurant_Reviews.tsv), including all the cleaning and pre-processing of data, and splitting the data into a training and a test set. I've commented out the feature scaling section as for Restaurant_Reviews.tsv it's unneeded, because the elimination of stopwords in the pre-processing step means that it's unlikely any word will feature more than two times in a review (so we won't get large values), but this can be uncommented in order to use with different datasets. As a classifier I've used Gaussian Naive Bayes, which is a fairly simple plug-in classifier. The fitted model is exported so it can be used to analyse new reviews in Reviews_NewInput.py. It's then tested on the previously generated test set, with a confusion matrix displayed to evaluate its performance.
+
+The overall objective of this program is sentiment analysis. Here this is applied to analysing sentiment of restaurant reviews, but it could be used for other applications such as establishing how the population feels about a political candidate, or the media's stance on a particular company (which can in turn be important for predicting share prices).
