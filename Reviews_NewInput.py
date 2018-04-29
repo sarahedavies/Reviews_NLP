@@ -23,11 +23,7 @@ print(corpus)
 
 # We assume new reviews will be of similar form to the dataset, so not need scaling
 
-
-
-
-
-""" something about inserting the trained model here! need to use our already established BoW!"""
+# Running the model on the input
 from sklearn.externals import joblib
 from sklearn.feature_extraction.text import CountVectorizer
 cv = joblib.load('nlp_cv.pkl')
